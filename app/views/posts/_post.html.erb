@@ -1,0 +1,29 @@
+            <div data-marker-id="59c0c8e39aa2edasd626e485d" class="col-sm-6 col-xl-4 mb-5">
+              <div class="card h-100 border-0 shadow">
+                <% if post.image_link? %> 
+                <div style="background-image: url(<%= post.image_link %>); min-height: 200px;" class="card-img-top overflow-hidden dark-overlay bg-cover">
+                <% else %>
+                <div style="background-image: url(img/photo/restaurant-1430931071372-38127bd472b8.jpg); min-height: 200px;" class="card-img-top overflow-hidden dark-overlay bg-cover">
+                <% end %>  
+                  <%= link_to "",post, class: "tile-link" %>
+                  <div class="card-img-overlay-bottom z-index-20">
+                    <h4 class="text-white text-shadow"><%= post.title %></h4>
+                    <p class="mb-2 text-xs"><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-warning"></i><i class="fa fa-star text-gray-300">                    </i>
+                    </p>
+                  </div>
+                  <div class="card-img-overlay-top d-flex justify-content-between align-items-center">
+                    <div class="badge badge-transparent badge-pill px-3 py-2">Café</div><a href="javascript: void();" class="card-fav-icon position-relative z-index-40"> 
+                      <svg class="svg-icon text-white">
+                        <use xlink:href="#heart-1"> </use>
+                      </svg></a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="text-sm text-muted mb-3"> <%= truncate(strip_tags(post.content), length:80) %> </p>
+
+                  <p class="text-sm text-muted text-uppercase mb-1">By <a href="#" class="text-dark">Anh Bui</a></p>
+                  <p class="text-sm mb-0"><a href="#" class="mr-1">Nisi,</a><a href="#" class="mr-1">Ex,</a><a href="#" class="mr-1">Eiusmod</a>
+                  </p>
+                </div>
+              </div>
+            </div>

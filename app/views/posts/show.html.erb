@@ -1,14 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
 <%= @post.body %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
@@ -22,7 +13,7 @@
     <section class="hero-home dark-overlay mb-5"><img src="img/photo/photo-1467987506553-8f3916508521.jpg" alt="" class="bg-image">
       <div class="container py-7">
         <div class="overlay-content text-center text-white">
-          <h1 class="display-3 text-serif font-weight-bold text-shadow mb-0">Escape the city today</h1>
+          <h1 class="display-3 text-serif font-weight-bold text-shadow mb-0"><%= @post.title %></h1>
         </div>
       </div>
     </section>
@@ -31,7 +22,7 @@
         <div class="row">
           <div class="col-xl-8 col-lg-10 mx-auto">           
             <p class="py-3 mb-5 text-muted text-center font-weight-light"><a href=""><img src="img/avatar/avatar-11.jpg" alt="" class="avatar mr-2"></a> Written by <a href="#" class="font-weight-bold">John Slim</a><span class="mx-1">|</span> January 16, 2016 in <a href="blog.html" class="font-weight-bold">Living</a><span class="mx-1">|</span><a href="#" class="text-muted">2 comments                </a></p>
-            <p class="lead mb-5">As am hastily invited <strong>settled at limited</strong> civilly fortune me. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. </p>
+            <p class="lead mb-5"><%= sanitize(@post.content) %> </p>
           </div>
         </div>
         <div class="row">
